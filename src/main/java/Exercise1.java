@@ -1,10 +1,8 @@
 import com.mysql.cj.jdbc.MysqlDataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+
 /**
- * *******Add program description here******
+ * Performs a basic search on a Northwind (product) database to retrieve all product names.
  *
  * @author Ravi Spigner
  */
@@ -19,9 +17,11 @@ public class Exercise1 {
         dataSource.setPassword("yearup");
         Connection connection = dataSource.getConnection();
         //2. Perform Query
-        Statement statement = connection.createStatement();
-        String query = "SELECT ProductName FROM Products;";
-        ResultSet results = statement.executeQuery(query);
+        String productName = "Tofu";
+        String query = "SELECT ProductName FROM Products WHERE ProductName = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, productName);
+        ResultSet results = statement.executeQuery();
         //3. Display Results
         while (results.next()) {
             String product = results.getString("ProductName");
