@@ -1,6 +1,5 @@
 import com.mysql.cj.jdbc.MysqlDataSource;
 import java.sql.*;
-
 /**
  * Performs a basic search on a Northwind (product) database to retrieve all product names.
  *
@@ -17,10 +16,8 @@ public class Exercise1 {
         dataSource.setPassword("yearup");
         Connection connection = dataSource.getConnection();
         //2. Perform Query
-        String productName = "Tofu";
-        String query = "SELECT ProductName FROM Products WHERE ProductName = ?";
+        String query = "SELECT ProductName FROM Products";
         PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, productName);
         ResultSet results = statement.executeQuery();
         //3. Display Results
         while (results.next()) {
