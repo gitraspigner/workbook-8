@@ -1,4 +1,4 @@
-import com.mysql.cj.jdbc.MysqlDataSource;
+import org.apache.commons.dbcp2.BasicDataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,9 +17,9 @@ public class Exercise3and4 {
         //A database URL has the following format:
         //jdbc:mysql://[host][:port]/[databaseName]
         //1. Open connection
-        MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setURL("jdbc:mysql://localhost:3306/northwind");
-        dataSource.setUser(args[0]);
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setUrl("jdbc:mysql://localhost:3306/northwind");
+        dataSource.setUsername(args[0]);
         dataSource.setPassword(args[1]);
         connection = dataSource.getConnection();
         menu();
