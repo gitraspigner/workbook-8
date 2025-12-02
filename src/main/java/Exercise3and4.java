@@ -7,8 +7,9 @@ import java.util.Scanner;
  *
  * @author Ravi Spigner
  */
-public class Exercise3 {
+public class Exercise3and4 {
     private static Connection connection;
+    private static Scanner scanner;
     public static void main(String[] args) throws SQLException {
         //A database URL has the following format:
         //jdbc:mysql://[host][:port]/[databaseName]
@@ -25,13 +26,14 @@ public class Exercise3 {
     public static void menu() throws SQLException {
         displayWelcome();
         String input;
-        Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
         while (true) {
             System.out.print("""
                     ------------Main Menu------------
                     What do you want to do?
                     1) Display all products
                     2) Display all customers
+                    3) Display all categories
                     0) Exit
                     Select an option:\s""");
             input = scanner.nextLine().trim();
@@ -43,11 +45,14 @@ public class Exercise3 {
                 displayAllProducts();
             } else if (input.equals("2")) {
                 displayAllCustomers();
+            } else if (input.equals("3")) {
+                displayAllCategories();
+                //TODO: redesign each method to use try with resources block
             } else if (input.equals("0")) {
                 displayGoodbye();
                 break;
             } else {
-                errorMessage(input, "Is An Invalid Menu Option. Only 1,2, or 0 is " +
+                errorMessage(input, "Is An Invalid Menu Option. Only 1,2,3, or 0 is " +
                         "acceptable for your menu input");
             }
         }
@@ -114,6 +119,72 @@ public class Exercise3 {
             //delimiters ('%' = start of delimiter, '-' = left align, '##' = total characters
             //(to pad with spaces), 's'/'f'/'d' = String Type/
             //(decimal number/double/"float")/integer
+        }
+    }
+    public static void displayAllCategories() throws SQLException {
+        //2. Perform Query To Show Categories
+        String query = "SELECT CategoryID, CategoryName FROM Categories";
+        PreparedStatement statement = connection.prepareStatement(query);
+        ResultSet results = statement.executeQuery();
+        //3. Display Results
+        //-header ('%' = start of delimiter, '-' = left align, '##' = total characters
+        //(to pad with spaces), 's' = String Type
+        System.out.printf("%-2s %-20s%n",
+                "Id", "Name");
+        //max char lengths of each field:
+        //2 chars (should be in case more are added) the max length of any category id
+        //32 chars is the max length of any category name
+        System.out.println("-- --------------------");
+        //-results
+        while (results.next()) {
+            int id = results.getInt("CategoryID");
+            String name = results.getString("CategoryName");
+            System.out.printf("%-2s %-20s%n",
+                    id, name);
+            //delimiters ('%' = start of delimiter, '-' = left align, '##' = total characters
+            //(to pad with spaces), 's'/'f'/'d' = String Type/
+            //(decimal number/double/"float")/integer
+        }
+        //2.5/3.5. Ask User for category id to display all products from the category
+        String input;
+        while (true) {
+            System.out.print("Please enter the CategoryID of a category for which you " +
+                    "would like to display all products of: ");
+            input = scanner.nextLine().trim();
+            if (!isNumber(input)) {
+                errorMessageNumber(input, true);
+            } else {
+                //2. Perform Query To Show Categories
+                query = "SELECT p.* FROM Products p JOIN Categories c ON p.CategoryID = " +
+                        "c.CategoryID WHERE p.CategoryID = ?";
+                statement = connection.prepareStatement(query);
+                statement.setInt(1, Integer.parseInt(input));
+                results = statement.executeQuery();
+                //3. Display Results
+                //-header ('%' = start of delimiter, '-' = left align, '##' = total characters
+                //(to pad with spaces), 's' = String Type
+                System.out.printf("%-2s %-32s %-6s %-3s%n",
+                        "Id", "Name", "Price", "Stock");
+                //max char lengths of each field:
+                //2 chars is the max length of any product id
+                //32 chars is the max length of any product name
+                //4 chars is the max length of any product price
+                //3 chars is the max length of any product stock
+                System.out.println("-- -------------------------------- -----  -----");
+                //-results
+                while (results.next()) {
+                    int id = results.getInt("ProductID");
+                    String name = results.getString("ProductName");
+                    double price = results.getDouble("UnitPrice");
+                    int stock = results.getInt("UnitsInStock");
+                    System.out.printf("%-2d %-32s %-6.2f %-3d%n",
+                            id, name, price, stock);
+                    //delimiters ('%' = start of delimiter, '-' = left align, '##' = total characters
+                    //(to pad with spaces), 's'/'f'/'d' = String Type/
+                    //(decimal number/double/"float")/integer
+                }
+                break;
+            }
         }
     }
     public static boolean isNumber(String input) {
