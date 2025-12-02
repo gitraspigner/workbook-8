@@ -17,6 +17,15 @@ public class SakilaFilm {
         this.release_year = release_year;
         this.length = length;
     }
+    @Override
+    public String toString() {
+        return "SakilaFilm{" +
+                "film_id=" + film_id +
+                ", title='" + title + '\'' +
+                ", release_year='" + release_year + '\'' +
+                ", length='" + length + '\'' +
+                '}';
+    }
     public int getFilm_id() {
         return film_id;
     }

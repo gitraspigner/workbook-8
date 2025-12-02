@@ -15,6 +15,14 @@ public class SakilaActor {
         this.first_name = first_name;
         this.last_name = last_name;
     }
+    @Override
+    public String toString() {
+        return "SakilaActor{" +
+                "id=" + id +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                '}';
+    }
     public int getId() {
         return id;
     }
