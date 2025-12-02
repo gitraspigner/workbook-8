@@ -1,7 +1,8 @@
 import com.mysql.cj.jdbc.MysqlDataSource;
 import java.sql.*;
 /**
- * Performs a basic search on a Northwind (product) database to retrieve all product names.
+ * Performs a basic search on a Northwind (product) database to retrieve all product names
+ * (and no other info of products in the database).
  *
  * @author Ravi Spigner
  */
