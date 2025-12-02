@@ -1,6 +1,6 @@
 package com.pluralsight.Exercise6SakilaDataManager;
 /**
- * Represents a Film (entry within the Actor table of the Sakila Movie database).
+ * Represents a Film (entry within the Film table of the Sakila Movie database).
  * Only 4 columns of the table have been included as fields (according to the
  * writeup for this exercise) for brevity.
  *

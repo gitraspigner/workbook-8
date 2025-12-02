@@ -1,7 +1,8 @@
 package com.pluralsight.Exercise6SakilaDataManager;
-
 /**
  * Represents an Actor (entry within the Actor table of the Sakila Movie database).
+ * Only 3 columns of the table have been included as fields (according to the
+ * writeup for this exercise) for brevity.
  *
  * @author Ravi Spigner
  */
