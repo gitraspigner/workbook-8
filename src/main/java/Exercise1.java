@@ -7,8 +7,8 @@ import java.sql.*;
  */
 public class Exercise1 {
     public static void main(String[] args) throws SQLException {
-        //    A database URL has the following format:
-        //    jdbc:mysql://[host][:port]/[database][?propertyName1=propertyValue1]
+        //A database URL has the following format:
+        //jdbc:mysql://[host][:port]/[databaseName]
         //1. Open connection
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setURL("jdbc:mysql://localhost:3306/northwind");
