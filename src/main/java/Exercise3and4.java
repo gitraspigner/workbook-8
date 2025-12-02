@@ -63,7 +63,7 @@ public class Exercise3and4 {
         PreparedStatement statement = connection.prepareStatement(query);
         ResultSet results = statement.executeQuery();
         //3. Display Results
-        //header ('%' = start of delimiter, '-' = left align, '##' = total characters
+        //-header ('%' = start of delimiter, '-' = left align, '##' = total characters
         //(to pad with spaces), 's' = String Type
         System.out.printf("%-2s %-32s %-6s %-3s%n",
                 "Id", "Name", "Price", "Stock");
@@ -73,7 +73,7 @@ public class Exercise3and4 {
         //4 chars is the max length of any product price
         //3 chars is the max length of any product stock
         System.out.println("-- -------------------------------- -----  -----");
-        //results
+        //-results
         while (results.next()) {
             int id = results.getInt("ProductID");
             String name = results.getString("ProductName");
@@ -92,7 +92,7 @@ public class Exercise3and4 {
         PreparedStatement statement = connection.prepareStatement(query);
         ResultSet results = statement.executeQuery();
         //3. Display Results
-        //header ('%' = start of delimiter, '-' = left align, '##' = total characters
+        //-header ('%' = start of delimiter, '-' = left align, '##' = total characters
         //(to pad with spaces), 's' = String Type
         System.out.printf("%-7s %-40s %-17s %-14s %-13s %-16s%n",
                 "Id", "Company Name", "City", "Region", "Country", "Phone Number");
@@ -105,7 +105,7 @@ public class Exercise3and4 {
         //14 chars is the max length of any phone (number)
         System.out.println("-----   ---------------------------------------- -----------------  " +
                 "--------------  -----------  ----------------");
-        //results
+        //-results
         while (results.next()) {
             String id = results.getString("CustomerID");
             String companyName = results.getString("CompanyName");
