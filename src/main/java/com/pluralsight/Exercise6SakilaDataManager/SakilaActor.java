@@ -17,11 +17,9 @@ public class SakilaActor {
     }
     @Override
     public String toString() {
-        return "SakilaActor{" +
-                "id=" + id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                '}';
+        return "id: " + id +
+                ", first name: " + first_name +
+                ", last name: " + last_name;
     }
     public int getId() {
         return id;

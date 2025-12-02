@@ -19,12 +19,10 @@ public class SakilaFilm {
     }
     @Override
     public String toString() {
-        return "SakilaFilm{" +
-                "film_id=" + film_id +
-                ", title='" + title + '\'' +
-                ", release_year='" + release_year + '\'' +
-                ", length='" + length + '\'' +
-                '}';
+        return "id: " + film_id +
+                ", title: " + title +
+                ", release year: " + release_year +
+                ", length: " + length;
     }
     public int getFilm_id() {
         return film_id;
