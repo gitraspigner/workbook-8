@@ -1,3 +1,5 @@
+package com.pluralsight;
+
 import com.mysql.cj.jdbc.MysqlDataSource;
 import java.sql.*;
 /**
