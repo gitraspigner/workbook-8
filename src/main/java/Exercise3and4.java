@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 /**
  * A command line application that performs basic searches on a Northwind (product) database
  * in order to retrieve all products or all customers.
