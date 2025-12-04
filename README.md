@@ -2,10 +2,11 @@
 ## Course Taught By: Maaike Van Putten
 
 ### 🛠️ Tools Used
+
+![Windows CMD](https://img.shields.io/badge/shell-Windows%20CMD-white.svg?logo=windows-terminal&logoColor=0078D6) | 
+![Maven](https://img.shields.io/badge/build-Maven-C71A36.svg?logo=apachemaven&logoColor=white) | 
 ![SQL](https://img.shields.io/badge/language-SQL-blue.svg) / 
 ![mySQL](https://img.shields.io/badge/database-MySQL-4479A1.svg?logo=mysql&logoColor=white)
-![Windows CMD](https://img.shields.io/badge/shell-Windows%20CMD-white.svg?logo=windows-terminal&logoColor=0078D6)
-![Maven](https://img.shields.io/badge/build-Maven-C71A36.svg?logo=apachemaven&logoColor=white)
 
 | Active/Inactive | Active Dates |
 | --- | --- |
