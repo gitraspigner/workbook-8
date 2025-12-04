@@ -3,7 +3,7 @@
 
 ### 🛠️ Tools Used
 
-![Java](https://img.shields.io/badge/language-Java-blue.svg) ![IDE](https://img.shields.io/badge/IDE-IntelliJ-orange) |  
+![Java](https://img.shields.io/badge/language-Java-blue.svg) ![IDE](https://img.shields.io/badge/IDE-IntelliJ-orange) <br>
 ![SQL](https://img.shields.io/badge/language-SQL-blue.svg) / ![mySQL](https://img.shields.io/badge/database-MySQL-4479A1.svg?logo=mysql&logoColor=white) <br>
 ![Maven](https://img.shields.io/badge/build-Maven-C71A36.svg?logo=apachemaven&logoColor=white) <br>
 ![Windows CMD](https://img.shields.io/badge/shell-Windows%20CMD-white.svg?logo=windows-terminal&logoColor=0078D6)
