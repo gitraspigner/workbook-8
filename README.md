@@ -27,8 +27,10 @@ The workbook (PDF) containing most of the exercises from the week cannot be uplo
   - Result Set
   - Using Try-With-Resources (for a Connection, Prepared Statement, or Result Set)
   - Data Managers & Data Access Objects (DAO)
-- CRUD Operations (with heavy emphasis on C, R, & D) 
-  
+- CRUD Operations (with heavy emphasis on C, R, & D)
+- Git Via Command Line (for me: Windows CMD)
+  - Basics: File/Directory Navigation & Creation, Clone, Stage/Commit/Push/Pull Changes, Branch
+
 ### 🕒 Commits History Here
 [Click Here](https://github.com/gitraspigner/workbook-8/commits)
 
