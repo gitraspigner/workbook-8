@@ -35,7 +35,8 @@ The workbook (PDF) containing most of the exercises from the week cannot be uplo
 [Click Here](https://github.com/gitraspigner/workbook-8/commits)
 
 ### 💭 My Thoughts
-*In Progress*
+- I think that this week was a good review for me regarding syntaxes, specifically: Maven, using Prepared Statement, and the JDBC methods to call doing different CRUD operations. Additionally, it was also helpful to continue building SQL queries to further familiarize myself with their syntaxes as well. This thoughts section is not as long as other workbooks or workshops despite the fact that Maven, JDBC, and SQL are newer concepts in the course curriculum (than Java). I feel confident with these so far, even given all that we've covered.
+- A note about the Sakila Database ([Here](https://github.com/gitraspigner/workbook-8/blob/master/src/main/java/com/pluralsight/databaseFiles/sakila-db.sql)): It only includes movies from the year 2006, so don't be alarmed when searching the dataset (this is the way it was designed, I am open to modifying it at some point (with or without the help of ChatGPT, it doesn't matter to me either way, only so that there's more diverse data)).
 <!-- ([SAMPLE TEXT](LINK TEXT)) -->
 
 #### 🔖 Citation
