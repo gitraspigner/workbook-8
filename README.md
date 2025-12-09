@@ -10,7 +10,7 @@
 
 | Active/Inactive | Active Dates |
 | --- | --- |
-| ![Status](https://img.shields.io/badge/status-active-brightgreen) | 12/01/2025 - 12/05/2025|
+| ![Status](https://img.shields.io/badge/status-inactive-lightgrey) | 12/01/2025 - 12/05/2025|
 <!-- Inactive:  https://img.shields.io/badge/status-inactive-lightgrey -->
 <!-- Active:    https://img.shields.io/badge/status-active-brightgreen -->
 
@@ -19,8 +19,15 @@ Contains a collection of my starter-level Java (DataManager class, DAO class), S
 The workbook (PDF) containing most of the exercises from the week cannot be uploaded due to Pluralsight ownership rights. However, I was able to upload the databases (Northwind Traders & Sakila (Movies)) referenced. <br>
 
 #### *Topics covered include:*<br> 
-- XXX
-  - XXX
+- Maven
+  - pom.xml
+- JDBC
+  - How to Add Its Dependency in Maven
+  - Prepared Statement vs. Statement (Benefits of Using Prepared Statement)
+  - Result Set
+  - Using Try-With-Resources (for a Connection, Prepared Statement, or Result Set)
+  - Data Managers & Data Access Objects (DAO)
+- CRUD Operations (with heavy emphasis on C, R, & D) 
   
 ### 🕒 Commits History Here
 [Click Here](https://github.com/gitraspigner/workbook-8/commits)
@@ -35,4 +42,4 @@ OpenAI. (2025). ChatGPT (Oct 1 version) [Large language model]. https://chatgpt.
 
 *I have to give credit where it's due, right?* <br>
 
-**Last Edited: 12/04/2025**
+**Last Edited: 12/08/2025**
